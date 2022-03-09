@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "Name": "Jane Doe",
+    "Age": 30,
+    "Address": "NYC, USA",
+    "ZIP": "10001",
+    "Interest": "Sports, Movies, Reading Books"
+  },
+  {
+    "id": 2,
+    "Name": "John Doe",
+    "Age": 32,
+    "Address": "NYC, USA",
+    "ZIP": "10001",
+    "Interest": "Racing, Reading Books, Trekking"
+  }
+]

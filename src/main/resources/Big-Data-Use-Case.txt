@@ -1,0 +1,58 @@
+Use case:
+We are looking at the information from our data partner and find out the interest of people based on their submissions.
+The data structure is in JSON and looks as below:
+
+
+{
+	{
+	"id" : 1,
+	"Name" : "Jane Doe", 
+	"Age" : 30,
+	"Address" : "NYC, USA",
+	"ZIP" : "10001",
+	"Interest" : "Sports, Movies, Reading Books"
+	},
+	{
+	"id" : 2,
+	"Name" : "John Doe", 
+	"Age" : 32,
+	"Address" : "NYC, USA",
+	"ZIP" : "10001",
+	"Interest" : "Racing, Reading Books, Trekking"
+	}
+}
+
+Expected Output
+
+1. Transform above JSON in a key value pair to be stored per interest for all of the users. The final data structure should look like below and to be stored in CSV file.
+
+
+ID	NAME		AGE	ADDRESS		ZIP		INTEREST
+1	Jane Doe	30	NYC, USA	10001	Sports
+1	Jane Doe	30	NYC, USA	10001	Movies
+1	Jane Doe	30	NYC, USA	10001	Reading Books
+2	John Doe	32	NYC, USA	10001	Racing
+2	John Doe	32	NYC, USA	10001	Reading Books
+2	John Doe	32	NYC, USA	10001	Trekking
+
+
+
+2. Aggregate all the interest categories by Zip code and get the corresponding count. The output should look like below given the above input JSON.
+
+Interest		Zip		Count
+Sports			10001	1
+Movies			10001	1
+Reading Books	10001	2
+Racing			10001	1
+Trekking		10001	1
+
+
+Expectations from code:
+1. Code should be done in JAVA or Scala
+2. Spark 2.4 and above should be used
+3. Spark Dataframe APIs should be used
+4. Code should be open for extension 
+5. Application should accept the commandline parameters of the use case ids (1 or 2 or both) and displahy results accordingly.
+6. Test cases should be implemented 
+
+
